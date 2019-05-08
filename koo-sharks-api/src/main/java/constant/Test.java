@@ -3,9 +3,9 @@ package constant;
 public class Test {
 
     public enum Demo {
-        First(1,"one",new String[]{"111"}),
-        Second(2,"two",new String[]{"222"}),
-        Third(3,"three",new String[]{"333"});
+        FIRST(1,"one",new String[]{"111"}),
+        SECOND(2,"two",new String[]{"222"}),
+        THIRD(3,"three",new String[]{"333"});
         int code;
         String describe;
         String[] args;
@@ -19,7 +19,7 @@ public class Test {
 
     public static void main(String[] args) {
         Demo de = null;
-        de = Demo.valueOf("Third");
+        de = Demo.valueOf("Third".toUpperCase());
         System.out.println(de.args[0]);
         //output 333
     }
